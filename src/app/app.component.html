@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <app-passengerlist [passengerlist] = "passenger"></app-passengerlist>
+        </div>
+        <div class="col-md-10">
+            <app-passengercard *ngFor="let card of passenger"
+            [passengercard] = "card"
+            (emitter)="deletepassenger($event)"></app-passengercard>
+        </div>
+    </div>
+</div>
